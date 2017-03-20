@@ -1,5 +1,5 @@
 ExpressRoute Builder README notes
-This script is designed to deploy the required companents to implement ExpressRoute technology for Microsoft Azure Cloud.
+This script is designed to deploy the required components to implement ExpressRoute technology for Microsoft Azure Cloud.
 
 Before proceeding to run this script, there are some architectual design decisions you need to make about the ExpressRoute Solution you are designing.
 
