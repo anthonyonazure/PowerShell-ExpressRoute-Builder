@@ -114,7 +114,7 @@ $ServiceKey = @()
                         Set-AzureRmVirtualNetwork -VirtualNetwork $VNetName -Verbose
                         $subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -VirtualNetwork $VNetName
                         $pip = New-AzureRmPublicIpAddress -Name $GWIPName  -ResourceGroupName $Global:AzureRMGroup.ResourceGroupName -Location $Global:Location -AllocationMethod Dynamic
-                        $ipconf = New-AzureRmVirtualNetworkGatewayIpConfig -Name $GWIPconfName -Subnet $subnet -PublicIpAddress $pip.IpConfiguration
+                        $ipconf = New-AzureRmVirtualNetworkGatewayIpConfig -Name $GWIPconfName -Subnet $subnet -PublicIpAddress $pip
                         Write-Host "Deploying the Gateway and subnet.  This operation can take between 20-40 minutes" -ForegroundColor Yellow
                         New-AzureRmVirtualNetworkGateway -Name $GWName -ResourceGroupName $Global:AzureRMGroup.ResourceGroupName -Location $Global:Location -GatewayType Expressroute -IpConfigurations $ipconf -GatewaySku Standard -VpnType $VPNType -Verbose
 
